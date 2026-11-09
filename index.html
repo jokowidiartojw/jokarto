@@ -1,356 +1,844 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <title>Joko Widiarto's Profile</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <title>Joko Widiarto — Senior Programmer & IT Specialist</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
-    <link rel="stylesheet" href="assets/css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/animate.css">
-    
-    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <!-- Google Fonts: Inter & Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="stylesheet" href="assets/css/aos.css">
+    <!-- CSS Assets -->
+    <link rel="stylesheet" href="assets/css/open-iconic-bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/animate.css" />
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="assets/css/magnific-popup.css" />
+    <link rel="stylesheet" href="assets/css/aos.css" />
+    <link rel="stylesheet" href="assets/css/ionicons.min.css" />
+    <link rel="stylesheet" href="assets/css/flaticon.css" />
+    <link rel="stylesheet" href="assets/css/icomoon.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+    />
 
-    <link rel="stylesheet" href="assets/css/ionicons.min.css">
-    
-    <link rel="stylesheet" href="assets/css/flaticon.css">
-    <link rel="stylesheet" href="assets/css/icomoon.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-	<link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
-	<link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css">
-	<link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <style>
+      :root {
+        --bg-main: #0c0e12;
+        --bg-card: rgba(23, 27, 34, 0.75);
+        --bg-card-hover: rgba(32, 38, 48, 0.9);
+        --primary: #f59e0b; /* Warm Gold / Amber Accent */
+        --primary-glow: rgba(245, 158, 11, 0.2);
+        --accent: #e34f26; /* Accent Color */
+        --text-main: #f3f4f6;
+        --text-muted: #9ca3af;
+        --border-color: rgba(255, 255, 255, 0.08);
+      }
+
+      body {
+        background-color: var(--bg-main) !important;
+        color: var(--text-main) !important;
+        font-family: "Inter", sans-serif !important;
+        overflow-x: hidden;
+      }
+
+      /* Sticky Fixed Navbar */
+      .ftco_navbar {
+        position: fixed !important;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1030;
+        background: rgba(12, 14, 18, 0.92) !important;
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border-color);
+        padding: 15px 0 !important;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      }
+      .navbar-brand {
+        font-family: "Poppins", sans-serif;
+        font-weight: 700 !important;
+        letter-spacing: -0.5px;
+        color: #fff !important;
+      }
+      .navbar-brand span {
+        color: var(--primary);
+      }
+      .nav-link {
+        font-size: 14px !important;
+        font-weight: 500 !important;
+        color: var(--text-muted) !important;
+        transition: all 0.3s ease;
+      }
+      .nav-link:hover,
+      .nav-item.active .nav-link {
+        color: var(--primary) !important;
+      }
+
+      /* Hero Section Adjustment for Fixed Navbar */
+      .hero-wrap {
+        padding: 180px 0 100px 0;
+        position: relative;
+      }
+      .hero-title {
+        font-family: "Poppins", sans-serif;
+        font-size: 52px;
+        font-weight: 700;
+        line-height: 1.15;
+        color: #ffffff;
+      }
+      .hero-title span {
+        background: linear-gradient(135deg, #fbbf24 0%, var(--primary) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .hero-subtitle {
+        font-size: 20px;
+        color: var(--accent);
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        margin-bottom: 25px;
+      }
+      .btn-custom {
+        background: var(--primary);
+        color: #0c0e12 !important;
+        font-weight: 600;
+        padding: 14px 32px;
+        border-radius: 10px;
+        box-shadow: 0 10px 25px -5px var(--primary-glow);
+        transition: all 0.3s ease;
+        border: none;
+        display: inline-block;
+      }
+      .btn-custom:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 15px 30px -5px rgba(245, 158, 11, 0.35);
+        background: #d97706;
+      }
+
+      /* Section Common */
+      .section-title {
+        text-align: center;
+        margin-bottom: 60px;
+      }
+      .section-title h2 {
+        font-family: "Poppins", sans-serif;
+        font-size: 36px;
+        font-weight: 700;
+        color: #ffffff;
+      }
+      .section-title p {
+        color: var(--text-muted);
+        font-size: 15px;
+      }
+
+      /* About Section */
+      .about-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border-color);
+        border-radius: 16px;
+        padding: 40px;
+        backdrop-filter: blur(10px);
+      }
+      .about-text p {
+        color: #d1d5db;
+        font-size: 16px;
+        line-height: 1.7;
+      }
+
+      /* Skills Section - 3 Segment Modern Grid */
+      .skill-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border-color);
+        border-radius: 16px;
+        padding: 30px 20px;
+        height: 100%;
+        transition: all 0.3s ease;
+      }
+      .skill-card:hover {
+        border-color: rgba(245, 158, 11, 0.4);
+        transform: translateY(-5px);
+      }
+      .skill-header {
+        font-family: "Poppins", sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        color: #fff;
+        margin-bottom: 25px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .skill-header i {
+        color: var(--primary);
+        font-size: 24px;
+      }
+      .skill-item-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+      }
+      .skill-badge-item {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid var(--border-color);
+        border-radius: 10px;
+        padding: 16px 10px;
+        text-align: center;
+        transition: all 0.3s ease;
+      }
+      .skill-badge-item:hover {
+        background: rgba(245, 158, 11, 0.08);
+        border-color: var(--primary);
+      }
+      .skill-badge-item i {
+        font-size: 32px;
+        color: var(--text-main);
+        margin-bottom: 8px;
+        display: block;
+      }
+      .skill-badge-item span {
+        font-size: 13px;
+        font-weight: 500;
+        color: var(--text-muted);
+      }
+
+      /* Portfolio Section */
+      .portfolio-segment-header {
+        font-size: 20px;
+        font-weight: 600;
+        color: #fff;
+        margin: 40px 0 25px 0;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .portfolio-segment-header i {
+        color: var(--accent);
+      }
+      .project-card-modern {
+        background: var(--bg-card);
+        border: 1px solid var(--border-color);
+        border-radius: 14px;
+        padding: 28px;
+        height: 100%;
+        transition: all 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .project-card-modern:hover {
+        background: var(--bg-card-hover);
+        border-color: var(--primary);
+        transform: translateY(-5px);
+        box-shadow: 0 20px 40px -15px var(--primary-glow);
+      }
+      .project-tag {
+        align-self: flex-start;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        color: #10b981;
+        background: rgba(16, 185, 129, 0.1);
+        padding: 4px 10px;
+        border-radius: 6px;
+        margin-bottom: 15px;
+      }
+      .project-tag-alt {
+        color: var(--primary);
+        background: rgba(245, 158, 11, 0.1);
+      }
+      .project-card-modern h4 {
+        color: #ffffff;
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 12px;
+      }
+      .project-card-modern p {
+        color: var(--text-muted);
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 0;
+      }
+
+      /* Contact Section */
+      .contact-box {
+        background: var(--bg-card);
+        border: 1px solid var(--border-color);
+        border-radius: 12px;
+        padding: 30px 20px;
+        text-align: center;
+        transition: all 0.3s ease;
+        display: block;
+      }
+      .contact-box:hover {
+        border-color: var(--primary);
+        transform: translateY(-4px);
+      }
+      .contact-icon {
+        width: 50px;
+        height: 50px;
+        background: rgba(245, 158, 11, 0.1);
+        color: var(--primary);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        margin: 0 auto 15px auto;
+      }
+      .contact-box h3 {
+        font-size: 15px;
+        color: #fff;
+        font-weight: 600;
+        margin: 0;
+      }
+
+      /* Utilities */
+      .section-space {
+        padding: 100px 0;
+      }
+    </style>
   </head>
-  <style>
-	.img_profile {
-    	height: 520px !important;
-	}
-  </style>
-  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-	  
-	  
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
-	    <div class="container">
-	      <a class="navbar-brand" href="index.html">Welcome</a>
-	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
-	      </button>
 
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav nav ml-auto">
-	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
-	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
-	          <li class="nav-item"><a href="#skills-section" class="nav-link"><span>Skills</span></a></li>
-	          <li class="nav-item"><a href="#projects-section" class="nav-link"><span>Portfolio</span></a></li>
-	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
-	        </ul>
-	      </div>
-	    </div>
-	  </nav>
-	  <section id="home-section" class="hero" style="margin-top:-140px;">
-		  <div class="home-slider owl-carousel" id="header_main">
-	      	<div class="slider-item ">
-	      	<div class="overlay"></div>
-	        <div class="container">
-	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-	          	<div class="img_profile one-third js-fullheight order-md-last img" style="background-image:url(assets/images/profil.png);">
-	          		<div class="overlay"></div>
-	          	</div>
-		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-		          	<div class="text">
-		          		<span class="subheading">Hello!</span>
-			            <h1 class="mb-4 mt-3">I'm <span>Joko Widiarto</span></h1>
-			            <h2 class="mb-4">IT Support - Junior Programmer</h2>
-			            <p><a href="assets/images/CV_JOKO_WIDIARTO.pdf" target="_blank" class="btn btn-primary py-3 px-4">Download My CV</a></p>
-		            </div>
-		          </div>
-	        	</div>
-	        </div>
-	      </div>
-    </section>
-
-    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section" style="margin-bottom:-200px;">
-    	<div class="container">
-    		<div class="row d-flex">
-    			<div class="col-md-6 col-lg-5 d-flex">
-    				<div class="img-about img d-flex align-items-stretch">
-    					<div class="overlay"></div>
-	    				<div class="img d-flex align-self-stretch align-items-center" style="background-image:url(assets/images/profil.png);">
-	    				</div>
-    				</div>
-    			</div>
-    			<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
-    				<div class="row justify-content-start pb-3">
-		          <div class="col-md-12 heading-section ftco-animate">
-		          	<h1 class="big">About</h1>
-		            <h2 class="mb-4">About Me</h2>
-		            <p>hi, I'm from Indonesia, I am interested in technology especially focusing on microcontroller, web and design.</p>
-                <p>My passion is looking for a career that provides an opportunity for me to utilize my skills and abilities in the computer field.</p>
-                
-		          </div>
-		        </div>
-	          <div class="counter-wrap ftco-animate d-flex mt-md-3">
-	          </div>
-	        </div>
-        </div>
-    	</div>
-    </section>
-
-  
-
-    <section class="ftco-section" id="skills-section" style="margin-bottom:-200px;">
-    	<div class="container">
-    		<div class="row justify-content-center py-5 mt-5">
-          <div class="col-md-12 heading-section text-center ftco-animate">
-          	<h1 class="big big-2">Expertase And Interest</h1>
-            <h2 class="mb-4">Expertase And Interest</h2>
-            <!-- <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p> -->
-          </div>
-        </div>
-    		<div class="row">
-					
-					<div class="col-md-4 text-center d-flex ftco-animate">
-						<a class="services-1">
-							<span class="icon">
-								<!-- <i class="flaticon-html"></i> -->
-								<i class="lab la-html5"></i>
-							</span>
-							<div class="desc">
-								<h3 class="mb-5">HTML</h3>
-							</div>
-						</a>
-					</div>
-
-					<div class="col-md-4 text-center d-flex ftco-animate">
-						<a class="services-1">
-							<span class="icon">
-								<!-- <i class="flaticon-php-1"></i> -->
-								<i class="lab la-php"></i>
-							</span>
-							<div class="desc">
-								<h3 class="mb-5">PHP</h3>
-							</div>
-						</a>
-					</div>
-
-					<div class="col-md-4 text-center d-flex ftco-animate">
-						<a class="services-1">
-							<span class="icon">
-								<!-- <i class="fa fa-css3"></i> -->
-								<i class="lab la-css3"></i>
-							</span>
-							<div class="desc">
-								<h3 class="mb-5">CSS</h3>
-							</div>
-						</a>
-					</div>
-
-					<div class="col-md-4 text-center d-flex ftco-animate">
-						<a class="services-1">
-							<span class="icon">
-								<i class="lab la-js-square"></i>
-							</span>
-							<div class="desc">
-								<h3 class="mb-5">JAVASCRIPT</h3>
-							</div>
-						</a>
-					</div>
-
-					<div class="col-md-4 text-center d-flex ftco-animate">
-						<a class="services-1">
-							<span class="icon">
-								<!-- <i class="fa fa-microchip"></i> -->
-								<i class="las la-microchip"></i>
-							</span>
-							<div class="desc">
-								<h3 class="mb-5">Arduino</h3>
-							</div>
-						</a>
-					</div>
-					<div class="col-md-4 text-center d-flex ftco-animate">
-						<a class="services-1">
-							<span class="icon">
-								<!-- <i class="flaticon-adobe-photoshop"></i> -->
-								<i class="lab la-adobe"></i>
-							</span>
-							<div class="desc">
-								<h3 class="mb-5">Photoshop</h3>
-							</div>
-						</a>
-					</div>
-          
-				</div>
-    	</div>
-    </section>
-
-		
-	
-
-    <section class="ftco-section ftco-project" id="projects-section" style="margin-bottom:-200px;">
-    	<div class="container">
-    		<div class="row justify-content-center pb-5">
-          		<div class="col-md-12 heading-section text-center ftco-animate">
-          	<h1 class="big big-2">Portfolio</h1>
-            <h2 class="mb-4">Portfolio</h2>
-			<br>
-			<br>
-            <p style="color : #ffc107;">Click image for more info</p>
-          		</div>
-        	</div>
-
-			<a href="https://www.instagram.com/stories/highlights/17943659332054706/" target="_blank">
-    		<div class="row">
-    			<div class="col-md-4">
-    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(assets/images/rcvoice.png);">
-    					<div class="overlay"></div>
-	    				<div class="text text-center p-4">
-	    					<h3><a href="https://www.instagram.com/stories/highlights/17943659332054706/" target="_blank">Prototype </h3>
-	    					<span>Arduino RC Using Voice</span>
-	    					</a>
-	    				</div>
-    				</div>
-  				</div>
-			</a>
-  				
-				<a href="https://www.youtube.com/watch?v=i7svBHRhYW0&t" target="_blank">
-				  <div class="col-md-8">
-    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(assets/images/prototype.jpg);">
-    					<div class="overlay"></div>
-	    				<div class="text text-center p-4">
-	    					<h3><a href="https://www.youtube.com/watch?v=i7svBHRhYW0&t" target="_blank">Prototype IoT</h3>
-	    					<span>SISTEM PEMBUANGAN SAMPAH OTOMATIS BERBASIS IOT MENGGUNAKAN MIKROKONTROLER (PROTOTIPE) IOT-BASED AUTOMATIC WASTE DISPOSAL SYSTEM USING MICROCONTROLLER (PROTOTYPE)</span>
-	    					</a>
-	    				</div>
-    				</div>
-  				</div>
-				</a>
-				
-			<a href="diknetpage.html">
-    			<div class="col-md-5">
-    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(assets/images/diknet.png);">
-    					<div class="overlay"></div>
-	    				<div class="text text-center p-4">
-	    					<h3><a href="diknetpage.html">Design Logo</h3>
-	    					<span style="color: white;">DIKNET Logo</span>
-	    					</a>
-	    				</div>
-    				</div>
-    			</div>
-			</a>
-
-			<a href="nsapage.html">
-    			<div class="col-md-4">
-    				<div class="row">
-    					<div class="col-md-12">
-		    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(assets/images/nsa.jpg);">
-		    					<div class="overlay"></div>
-			    				<div class="text text-center p-4">
-			    					<h3><a href="nsapage.html">Design Logo</h3>
-			    					<span>Clothing Brand Logo NOISYAPPRL</span>
-			    					</a>
-			    				</div>
-		    				</div>
-	    				</div>
-    				</div>
-    			</div>
-    		</a>
-    	</div>
-    </section>
-
-
-
-    <section class="ftco-section contact-section ftco-no-pb justify-content-center" id="contact-section" style="margin-bottom:-200px;">
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="120">
+    <!-- Sticky Navbar -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target"
+      id="ftco-navbar"
+    >
       <div class="container">
-      	<div class="row justify-content-center mb-5 pb-3">
-          <div class="col-md-7 heading-section text-center ftco-animate">
-            <h1 class="big big-2">Contact</h1>
-            <h2 class="mb-4">Contact Me</h2>
-            <!-- <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p> -->
+        <a class="navbar-brand" href="index.html">Joko<span> Widiarto</span></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#ftco-nav"
+          aria-controls="ftco-nav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="oi oi-menu"></span> Menu
+        </button>
+
+        <div class="collapse navbar-collapse" id="ftco-nav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a href="#home-section" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="#about-section" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="#skills-section" class="nav-link">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a href="#projects-section" class="nav-link">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a href="#contact-section" class="nav-link">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home-section" class="hero-wrap">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-7" data-aos="fade-up">
+            <div class="hero-subtitle">Senior Programmer</div>
+            <h1 class="hero-title mb-4">
+              Crafting Reliable <span>Web Applications</span>
+            </h1>
+            <p
+              class="text-muted mb-5"
+              style="font-size: 18px; max-width: 540px"
+            >
+              Combining 4+ years of full-stack software development expertise
+              with 2 years of robust IT support.
+            </p>
+            <div>
+              <a
+                href="assets/images/CV_JOKO_WIDIARTO.pdf"
+                target="_blank"
+                class="btn-custom"
+                >Download CV <i class="las la-download ml-2"></i
+              ></a>
+            </div>
+          </div>
+          <div
+            class="col-lg-5 mt-5 mt-lg-0"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="row" style="gap: 15px; padding: 10px">
+              <!-- Box 1 -->
+              <div class="col-12">
+                <div
+                  style="
+                    background: var(--bg-card);
+                    border: 1px solid var(--border-color);
+                    border-radius: 14px;
+                    padding: 24px;
+                    text-align: left;
+                    backdrop-filter: blur(10px);
+                  "
+                >
+                  <div
+                    style="
+                      font-size: 38px;
+                      font-weight: 700;
+                      color: var(--primary);
+                      font-family: &quot;Poppins&quot;, sans-serif;
+                    "
+                  >
+                    4+ Years
+                  </div>
+                  <div
+                    style="
+                      font-size: 15px;
+                      color: var(--text-muted);
+                      font-weight: 500;
+                    "
+                  >
+                    Web Development Experience
+                  </div>
+                </div>
+              </div>
+
+              <!-- Box 2 -->
+              <div class="col-12">
+                <div
+                  style="
+                    background: var(--bg-card);
+                    border: 1px solid var(--border-color);
+                    border-radius: 14px;
+                    padding: 20px;
+                    text-align: left;
+                  "
+                >
+                  <div
+                    style="
+                      font-size: 28px;
+                      font-weight: 700;
+                      color: var(--accent);
+                      font-family: &quot;Poppins&quot;, sans-serif;
+                    "
+                  >
+                    2 Years
+                  </div>
+                  <div style="font-size: 13px; color: var(--text-muted)">
+                    IT Support
+                  </div>
+                </div>
+              </div>
+
+              <!-- Box 3 -->
+              <div class="col-12">
+                <div
+                  style="
+                    background: var(--bg-card);
+                    border: 1px solid var(--border-color);
+                    border-radius: 14px;
+                    padding: 20px;
+                    text-align: left;
+                  "
+                >
+                  <div
+                    style="
+                      font-size: 28px;
+                      font-weight: 700;
+                      color: #fff;
+                      font-family: &quot;Poppins&quot;, sans-serif;
+                    "
+                  >
+                    10+
+                  </div>
+                  <div style="font-size: 13px; color: var(--text-muted)">
+                    Apps Maintained
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-	</div>
-	<div class="container">
-        <div class="row  contact-info mb-5">
-			<div class="col-md-3 d-flex ftco-animate justify-content-center">
-				<a href="mailto:jokowidiartojw@gmail.com" target="_blank">
-					<div class="align-self-stretch box p-4 text-center">
-						  <div class="icon d-flex align-items-center justify-content-center">
-							  <span class="flaticon-gmail-1"></span>
-						  </div>
-						  <h3 class="mb-4">Email</h3>
-					<!-- <p><a href="tel://1234567920">+ 1235 2355 98</a></p> -->
-				  </div>
-				</a>
-			  </div>
+      </div>
+    </section>
 
-          <div class="col-md-3 d-flex ftco-animate justify-content-center">
-			<a href="https://www.linkedin.com/in/joko-widiarto-825b641b1/" target="_blank">
-				<div class="align-self-stretch box p-4 text-center">
-          			<div class="icon d-flex align-items-center justify-content-center">
-          				<span class="flaticon-linkedin-1"></span>
-          			</div>
-          			<h3 class="mb-4">LinkedIn</h3>
-	            <!-- <p><a href="tel://1234567920">+ 1235 2355 98</a></p> -->
-	          </div>
-			</a>
-          </div>
-          <div class="col-md-3 d-flex ftco-animate justify-content-center">
-			<a href="https://www.youtube.com/channel/UCT4b6HuPMWjNuPE5KagqrIg/videos" target="_blank">
-				<div class="align-self-stretch box p-4 text-center">
-          			<div class="icon d-flex align-items-center justify-content-center">
-          				<span class="flaticon-youtube-1"></span>
-          			</div>
-          			<h3 class="mb-4">Youtube</h3>
-	            <!-- <p><a href="mailto:info@yoursite.com">info@yoursite.com</a></p> -->
-	          </div>
-			</a>
-          </div>
-          <div class="col-md-3 d-flex ftco-animate justify-content-center">
-			<a href="https://www.instagram.com/jokowidiarto/" target="_blank">
-				<div class="align-self-stretch box p-4 text-center">
-          			<div class="icon d-flex align-items-center justify-content-center">
-          				<span class="flaticon-instagram"></span>
-          			</div>
-          			<h3 class="mb-4">Instagram</h3>
-	            <!-- <p><a href="#">yoursite.com</a></p> -->
-	          	</div>
-			</a>
+    <!-- About Section -->
+    <section class="section-space" id="about-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10" data-aos="fade-up">
+            <div class="about-card">
+              <div class="section-title text-left mb-4">
+                <h2>About Me</h2>
+              </div>
+              <div class="about-text">
+                <p>
+                  Senior Tech Specialist with 4+ years of Web Development
+                  expertise and 2 years of hands-on IT Support experience.
+                  Skilled in building robust web applications, optimizing
+                  databases, and maintaining system infrastructure using PHP,
+                  MySQL, JavaScript, REST APIs, and Bootstrap.
+                </p>
+                <p class="mb-0">
+                  Combines strong programming capabilities with practical
+                  troubleshooting skills to deliver high-quality, reliable
+                  software solutions that support key business objectives.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
-	</section>
+      </div>
+    </section>
 
-       
-    
-  
+    <!-- Skills Section -->
+    <section class="section-space" id="skills-section">
+      <div class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h2>Technical Expertise</h2>
+          <p>Structured breakdown of core competencies and toolsets</p>
+        </div>
 
-  <!-- loader -->
-  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+        <div class="row">
+          <!-- Segment 1: Frontend -->
+          <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="skill-card">
+              <div class="skill-header">
+                <i class="las la-laptop-code"></i> Frontend
+              </div>
+              <div class="skill-item-grid">
+                <div class="skill-badge-item">
+                  <i class="lab la-html5" style="color: #e34f26"></i>
+                  <span>HTML5</span>
+                </div>
+                <div class="skill-badge-item">
+                  <i class="lab la-css3-alt" style="color: #1572b6"></i>
+                  <span>CSS3</span>
+                </div>
+                <div class="skill-badge-item">
+                  <i class="lab la-js-square" style="color: #f7df1e"></i>
+                  <span>JavaScript</span>
+                </div>
+                <div class="skill-badge-item">
+                  <i class="lab la-bootstrap" style="color: #7952b3"></i>
+                  <span>Bootstrap</span>
+                </div>
+              </div>
+            </div>
+          </div>
 
+          <!-- Segment 2: Backend -->
+          <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="skill-card">
+              <div class="skill-header">
+                <i class="las la-server"></i> Backend
+              </div>
+              <div class="skill-item-grid">
+                <div class="skill-badge-item">
+                  <i class="lab la-php" style="color: #8892be"></i>
+                  <span>PHP</span>
+                </div>
+                <div class="skill-badge-item">
+                  <i
+                    class="las la-network-wired"
+                    style="color: var(--accent)"
+                  ></i>
+                  <span>REST API</span>
+                </div>
+              </div>
+            </div>
+          </div>
 
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/aos.js"></script>
-  <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="js/scrollax.min.js"></script>
-  
-  <script src="js/main.js"></script>
-    
+          <!-- Segment 3: Data & Tools -->
+          <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="skill-card">
+              <div class="skill-header">
+                <i class="las la-database"></i> Data &amp; Tools
+              </div>
+              <div class="skill-item-grid">
+                <div class="skill-badge-item">
+                  <i class="las la-database" style="color: #00758f"></i>
+                  <span>MySQL</span>
+                </div>
+                <div class="skill-badge-item">
+                  <i class="lab la-git" style="color: #f05032"></i>
+                  <span>Git</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="section-space" id="projects-section">
+      <div class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h2>Featured Portfolio</h2>
+          <p>Key applications and system maintenance projects</p>
+        </div>
+
+        <!-- Kategori 1: Aplikasi Baru -->
+        <div class="portfolio-segment-header" data-aos="fade-up">
+          <i class="las la-code"></i> Aplikasi Baru
+        </div>
+        <div class="row">
+          <div class="col-md-6 mb-4" data-aos="fade-up">
+            <div class="project-card-modern">
+              <div>
+                <span class="project-tag">Web Application</span>
+                <h4>SINAPS</h4>
+                <p>
+                  Sistem Informasi Perkantoran Dinas Kesehatan (Manajemen Jadwal
+                  Aula, Monitoring Agenda, Surat Perkantoran, Produk Hukum,
+                  Dokumen Anggaran, Ticketing IT Support, dan Remunerasi).
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="project-card-modern">
+              <div>
+                <span class="project-tag">Web Application</span>
+                <h4>PERISAI</h4>
+                <p>
+                  Penatalaksanaan Penyakit Tular Vektor, Zoonosis &amp; Hewan
+                  Berbisa Berbasis Wilayah (Tracking &amp; Grafik Tular Vektor /
+                  Zoonosis per Kecamatan).
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-4" data-aos="fade-up">
+            <div class="project-card-modern">
+              <div>
+                <span class="project-tag">Web Application</span>
+                <h4>PROKESDA (Profil Kesehatan Daerah)</h4>
+                <p>
+                  Sistem pengolahan data indikator rumah sakit dan pemantauan
+                  profil kesehatan daerah secara rinci.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="project-card-modern">
+              <div>
+                <span class="project-tag">Web Application</span>
+                <h4>SIDAK (Sistem Informasi DAK)</h4>
+                <p>
+                  Pengembangan sistem informasi pengelolaan DAK (Dana Alokasi
+                  Khusus) beserta dashboard monitoring BOK Puskesmas.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kategori 2: Maintenance & Pembaruan Aplikasi -->
+        <div class="portfolio-segment-header" data-aos="fade-up">
+          <i class="las la-tools"></i> Maintenance &amp; Pembaruan Aplikasi
+        </div>
+        <div class="row">
+          <div class="col-md-4 mb-4" data-aos="fade-up">
+            <div class="project-card-modern">
+              <div>
+                <span class="project-tag project-tag-alt">Maintenance</span>
+                <h4>Web DINKES</h4>
+                <p>
+                  Pemeliharaan dan pembaharuan fitur portal utama Website Dinas
+                  Kesehatan Kota Tangerang.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="project-card-modern">
+              <div>
+                <span class="project-tag project-tag-alt">Maintenance</span>
+                <h4>Web Puskesmas</h4>
+                <p>
+                  Pengelolaan dan integrasi portal layanan informasi Puskesmas
+                  se-Kota Tangerang.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="project-card-modern">
+              <div>
+                <span class="project-tag project-tag-alt">System Update</span>
+                <h4>e-KS2 &amp; e-Klaim PKMK</h4>
+                <p>
+                  Pembaruan sistem layanan integrasi Klaim Skema 2 (Bagi
+                  Masyarakat Penyandang Masalah Kesejahteraan Sosial) dan Klaim
+                  Pangan Olahan untuk Keperluan Medis Khusus (PKMK).
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-4" data-aos="fade-up">
+            <div class="project-card-modern">
+              <div>
+                <span class="project-tag project-tag-alt">System Update</span>
+                <h4>Kompak Sumringah</h4>
+                <p>
+                  Pengembangan sistem pendataan Lansia &amp; PTM (Penyakit Tidak
+                  Menular).
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="project-card-modern">
+              <div>
+                <span class="project-tag project-tag-alt">System Update</span>
+                <h4>PHBS - Sekoper Semangat</h4>
+                <p>
+                  Sistem monitoring indikator Perilaku Hidup Bersih dan Sehat
+                  (PHBS) tatanan masyarakat dan Berperilahu Hidup Sehat (BHS).
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="project-card-modern">
+              <div>
+                <span class="project-tag project-tag-alt">System Update</span>
+                <h4>SICERIA</h4>
+                <p>
+                  Sistem Informasi Cek Rumah dan Lingkungan Kita (Monitoring
+                  Pilar STBM, Rumah Sehat &amp; Laporan Kesling).
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-12 mb-4" data-aos="fade-up">
+            <div class="project-card-modern">
+              <div>
+                <span class="project-tag project-tag-alt">System Update</span>
+                <h4>SIKASEP</h4>
+                <p>
+                  Aplikasi Sertifikasi Keamanan Pangan &amp; Manajemen Pengajuan
+                  Sertifikasi Industri Rumah Tangga (P-IRT).
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section-space" id="contact-section">
+      <div class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h2>Get In Touch</h2>
+          <p>Feel free to reach out for collaborations or opportunities</p>
+        </div>
+
+        <div class="row">
+          <div class="col-md-3 col-6 mb-4" data-aos="fade-up">
+            <a
+              href="mailto:jokowidiartojw@gmail.com"
+              target="_blank"
+              class="contact-box"
+            >
+              <div class="contact-icon"><i class="las la-envelope"></i></div>
+              <h3>Email</h3>
+            </a>
+          </div>
+          <div
+            class="col-md-3 col-6 mb-4"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <a
+              href="https://www.linkedin.com/in/joko-widiarto-825b641b1/"
+              target="_blank"
+              class="contact-box"
+            >
+              <div class="contact-icon"><i class="lab la-linkedin-in"></i></div>
+              <h3>LinkedIn</h3>
+            </a>
+          </div>
+          <div
+            class="col-md-3 col-6 mb-4"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <a
+              href="https://www.youtube.com/channel/UCT4b6HuPMWjNuPE5KagqrIg/videos"
+              target="_blank"
+              class="contact-box"
+            >
+              <div class="contact-icon"><i class="lab la-youtube"></i></div>
+              <h3>YouTube</h3>
+            </a>
+          </div>
+          <div
+            class="col-md-3 col-6 mb-4"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <a
+              href="https://www.instagram.com/jokowidiarto/"
+              target="_blank"
+              class="contact-box"
+            >
+              <div class="contact-icon"><i class="lab la-instagram"></i></div>
+              <h3>Instagram</h3>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        AOS.init({
+          duration: 800,
+          once: true,
+        });
+      });
+    </script>
   </body>
-
-  <script>
-	$( document ).ready(function() {
-		$("#header_main").removeClass("owl-drag");
-});
-  </script>
 </html>
