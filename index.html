@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="id">
   <head>
     <title>Joko Widiarto — Senior Programmer & IT Specialist</title>
     <meta charset="utf-8" />
@@ -34,22 +34,28 @@
 
     <style>
       :root {
-        --bg-main: #0c0e12;
-        --bg-card: rgba(23, 27, 34, 0.75);
-        --bg-card-hover: rgba(32, 38, 48, 0.9);
-        --primary: #f59e0b; /* Warm Gold / Amber Accent */
-        --primary-glow: rgba(245, 158, 11, 0.2);
-        --accent: #e34f26; /* Accent Color */
-        --text-main: #f3f4f6;
-        --text-muted: #9ca3af;
-        --border-color: rgba(255, 255, 255, 0.08);
+        --bg-main: #0e1036; /* Deep Midnight Navy */
+        --bg-card: rgba(22, 26, 74, 0.72); /* Elevated Navy Glass */
+        --bg-card-hover: rgba(30, 36, 98, 0.92);
+        --primary: #94b5e2; /* Soft Ice Blue */
+        --primary-glow: rgba(148, 181, 226, 0.18);
+        --accent: #fe6d2c; /* Electric Tangerine Orange */
+        --accent-glow: rgba(254, 109, 44, 0.32);
+        --text-main: #f4f7fc; /* Crisp Cool White */
+        --text-body: #d3def0; /* Soft Ice Tint for Paragraphs */
+        --text-muted: #8fa3c7; /* Muted Periwinkle Slate */
+        --border-color: rgba(148, 181, 226, 0.16);
       }
 
       body {
         background-color: var(--bg-main) !important;
-        color: var(--text-main) !important;
+        color: var(--text-body) !important;
         font-family: "Inter", sans-serif !important;
         overflow-x: hidden;
+      }
+
+      .text-muted {
+        color: var(--text-muted) !important;
       }
 
       /* Sticky Fixed Navbar */
@@ -59,18 +65,18 @@
         left: 0;
         right: 0;
         z-index: 1030;
-        background: rgba(12, 14, 18, 0.92) !important;
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
+        background: rgba(14, 16, 54, 0.88) !important;
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
         border-bottom: 1px solid var(--border-color);
         padding: 15px 0 !important;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 4px 24px rgba(5, 6, 26, 0.45);
       }
       .navbar-brand {
         font-family: "Poppins", sans-serif;
         font-weight: 700 !important;
         letter-spacing: -0.5px;
-        color: #fff !important;
+        color: #ffffff !important;
       }
       .navbar-brand span {
         color: var(--primary);
@@ -83,13 +89,18 @@
       }
       .nav-link:hover,
       .nav-item.active .nav-link {
-        color: var(--primary) !important;
+        color: var(--accent) !important;
       }
 
-      /* Hero Section Adjustment for Fixed Navbar */
+      /* Hero Section */
       .hero-wrap {
         padding: 180px 0 100px 0;
         position: relative;
+        background: radial-gradient(
+          circle at 80% 20%,
+          rgba(148, 181, 226, 0.08) 0%,
+          transparent 55%
+        );
       }
       .hero-title {
         font-family: "Poppins", sans-serif;
@@ -99,32 +110,50 @@
         color: #ffffff;
       }
       .hero-title span {
-        background: linear-gradient(135deg, #fbbf24 0%, var(--primary) 100%);
+        background: linear-gradient(135deg, #ffffff 0%, var(--primary) 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
       .hero-subtitle {
-        font-size: 20px;
+        font-size: 18px;
         color: var(--accent);
-        font-weight: 600;
-        letter-spacing: 0.5px;
-        margin-bottom: 25px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1.2px;
+        margin-bottom: 18px;
       }
       .btn-custom {
-        background: var(--primary);
-        color: #0c0e12 !important;
+        background: var(--accent);
+        color: #ffffff !important;
         font-weight: 600;
         padding: 14px 32px;
         border-radius: 10px;
-        box-shadow: 0 10px 25px -5px var(--primary-glow);
+        box-shadow: 0 10px 25px -5px var(--accent-glow);
         transition: all 0.3s ease;
         border: none;
         display: inline-block;
+        text-decoration: none !important;
       }
       .btn-custom:hover {
         transform: translateY(-2px);
-        box-shadow: 0 15px 30px -5px rgba(245, 158, 11, 0.35);
-        background: #d97706;
+        box-shadow: 0 15px 30px -5px rgba(254, 109, 44, 0.5);
+        background: #e55a1c;
+        color: #ffffff !important;
+      }
+
+      /* Hero Stat Cards */
+      .stat-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border-color);
+        border-radius: 14px;
+        padding: 22px 24px;
+        text-align: left;
+        backdrop-filter: blur(12px);
+        transition: all 0.3s ease;
+      }
+      .stat-card:hover {
+        border-color: var(--primary);
+        background: var(--bg-card-hover);
       }
 
       /* Section Common */
@@ -149,12 +178,128 @@
         border: 1px solid var(--border-color);
         border-radius: 16px;
         padding: 40px;
-        backdrop-filter: blur(10px);
+        backdrop-filter: blur(12px);
+        box-shadow: 0 15px 35px -15px rgba(5, 6, 26, 0.6);
       }
       .about-text p {
-        color: #d1d5db;
+        color: var(--text-body);
         font-size: 16px;
-        line-height: 1.7;
+        line-height: 1.75;
+      }
+
+      /* Experience Timeline Section */
+      .exp-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border-color);
+        border-radius: 16px;
+        padding: 32px;
+        margin-bottom: 24px;
+        backdrop-filter: blur(12px);
+        transition: all 0.3s ease;
+      }
+      .exp-card:hover {
+        border-color: var(--primary);
+        background: var(--bg-card-hover);
+      }
+      .exp-org-header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 12px;
+        padding-bottom: 20px;
+        margin-bottom: 24px;
+        border-bottom: 1px solid var(--border-color);
+      }
+      .exp-org-title {
+        font-family: "Poppins", sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        color: #ffffff;
+        margin-bottom: 4px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .exp-org-title i {
+        color: var(--primary);
+        font-size: 24px;
+      }
+      .exp-org-meta {
+        font-size: 13px;
+        color: var(--text-muted);
+      }
+      .exp-duration-badge {
+        background: rgba(148, 181, 226, 0.12);
+        color: var(--primary);
+        border: 1px solid rgba(148, 181, 226, 0.25);
+        font-size: 12px;
+        font-weight: 600;
+        padding: 6px 14px;
+        border-radius: 999px;
+      }
+      .exp-timeline {
+        position: relative;
+        padding-left: 26px;
+        border-left: 2px solid rgba(148, 181, 226, 0.22);
+      }
+      .exp-role-item {
+        position: relative;
+        padding-bottom: 26px;
+      }
+      .exp-role-item:last-child {
+        padding-bottom: 0;
+      }
+      .exp-role-dot {
+        position: absolute;
+        left: -33px;
+        top: 5px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: var(--primary);
+        border: 2px solid var(--bg-main);
+        box-shadow: 0 0 0 3px rgba(148, 181, 226, 0.2);
+      }
+      .exp-role-dot.active-role {
+        background: var(--accent);
+        box-shadow: 0 0 0 4px rgba(254, 109, 44, 0.25);
+      }
+      .exp-role-title {
+        font-family: "Poppins", sans-serif;
+        font-size: 17px;
+        font-weight: 600;
+        color: #ffffff;
+        margin-bottom: 2px;
+      }
+      .exp-role-period {
+        font-size: 13px;
+        color: var(--accent);
+        font-weight: 500;
+        margin-bottom: 10px;
+      }
+      .exp-role-period.past-period {
+        color: var(--primary);
+      }
+      .exp-role-desc {
+        font-size: 14px;
+        color: var(--text-body);
+        line-height: 1.65;
+        margin-bottom: 12px;
+      }
+      .exp-skill-pills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+      .exp-skill-pill {
+        font-size: 11px;
+        font-weight: 500;
+        color: var(--text-main);
+        background: rgba(14, 16, 54, 0.65);
+        border: 1px solid var(--border-color);
+        padding: 3px 10px;
+        border-radius: 6px;
       }
 
       /* Skills Section - 3 Segment Modern Grid */
@@ -167,21 +312,23 @@
         transition: all 0.3s ease;
       }
       .skill-card:hover {
-        border-color: rgba(245, 158, 11, 0.4);
+        border-color: var(--primary);
+        background: var(--bg-card-hover);
         transform: translateY(-5px);
+        box-shadow: 0 18px 35px -15px var(--primary-glow);
       }
       .skill-header {
         font-family: "Poppins", sans-serif;
         font-size: 18px;
         font-weight: 600;
-        color: #fff;
+        color: #ffffff;
         margin-bottom: 25px;
         display: flex;
         align-items: center;
         gap: 10px;
       }
       .skill-header i {
-        color: var(--primary);
+        color: var(--accent);
         font-size: 24px;
       }
       .skill-item-grid {
@@ -190,7 +337,7 @@
         gap: 15px;
       }
       .skill-badge-item {
-        background: rgba(255, 255, 255, 0.03);
+        background: rgba(14, 16, 54, 0.55);
         border: 1px solid var(--border-color);
         border-radius: 10px;
         padding: 16px 10px;
@@ -198,26 +345,27 @@
         transition: all 0.3s ease;
       }
       .skill-badge-item:hover {
-        background: rgba(245, 158, 11, 0.08);
+        background: rgba(148, 181, 226, 0.12);
         border-color: var(--primary);
       }
       .skill-badge-item i {
         font-size: 32px;
-        color: var(--text-main);
+        color: var(--primary);
         margin-bottom: 8px;
         display: block;
       }
       .skill-badge-item span {
         font-size: 13px;
         font-weight: 500;
-        color: var(--text-muted);
+        color: var(--text-main);
       }
 
       /* Portfolio Section */
       .portfolio-segment-header {
+        font-family: "Poppins", sans-serif;
         font-size: 20px;
         font-weight: 600;
-        color: #fff;
+        color: #ffffff;
         margin: 40px 0 25px 0;
         display: flex;
         align-items: center;
@@ -239,9 +387,9 @@
       }
       .project-card-modern:hover {
         background: var(--bg-card-hover);
-        border-color: var(--primary);
+        border-color: var(--accent);
         transform: translateY(-5px);
-        box-shadow: 0 20px 40px -15px var(--primary-glow);
+        box-shadow: 0 20px 40px -15px var(--accent-glow);
       }
       .project-tag {
         align-self: flex-start;
@@ -249,18 +397,20 @@
         font-weight: 600;
         letter-spacing: 0.5px;
         text-transform: uppercase;
-        color: #10b981;
-        background: rgba(16, 185, 129, 0.1);
+        color: var(--primary);
+        background: rgba(148, 181, 226, 0.14);
         padding: 4px 10px;
         border-radius: 6px;
         margin-bottom: 15px;
+        display: inline-block;
       }
       .project-tag-alt {
-        color: var(--primary);
-        background: rgba(245, 158, 11, 0.1);
+        color: var(--accent);
+        background: rgba(254, 109, 44, 0.14);
       }
       .project-card-modern h4 {
         color: #ffffff;
+        font-family: "Poppins", sans-serif;
         font-size: 18px;
         font-weight: 600;
         margin-bottom: 12px;
@@ -268,8 +418,97 @@
       .project-card-modern p {
         color: var(--text-muted);
         font-size: 14px;
-        line-height: 1.6;
-        margin-bottom: 0;
+        line-height: 1.65;
+        margin-bottom: 18px;
+      }
+      .project-footer {
+        padding-top: 14px;
+        border-top: 1px solid var(--border-color);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .tech-stack-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+      .tech-pill {
+        font-size: 11px;
+        font-weight: 500;
+        color: var(--primary);
+        background: rgba(14, 16, 54, 0.75);
+        border: 1px solid rgba(148, 181, 226, 0.2);
+        padding: 3px 9px;
+        border-radius: 5px;
+      }
+      .btn-project-detail {
+        background: transparent;
+        border: none;
+        padding: 0;
+        font-size: 12px;
+        font-weight: 600;
+        color: var(--accent);
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        transition: all 0.2s ease;
+      }
+      .btn-project-detail:hover {
+        color: #ffffff;
+        transform: translateX(3px);
+      }
+
+      /* Custom Dark Navy Modal */
+      .modal-content-navy {
+        background: #14184a;
+        border: 1px solid rgba(148, 181, 226, 0.28);
+        border-radius: 16px;
+        color: var(--text-body);
+        box-shadow: 0 25px 50px -12px rgba(4, 5, 22, 0.85);
+      }
+      .modal-header-navy {
+        border-bottom: 1px solid var(--border-color);
+        padding: 20px 28px;
+      }
+      .modal-header-navy .modal-title {
+        font-family: "Poppins", sans-serif;
+        font-weight: 700;
+        color: #ffffff;
+        font-size: 20px;
+      }
+      .modal-header-navy .close {
+        color: var(--text-muted);
+        text-shadow: none;
+        opacity: 1;
+      }
+      .modal-header-navy .close:hover {
+        color: var(--accent);
+      }
+      .modal-body-navy {
+        padding: 24px 28px;
+        font-size: 14.5px;
+        line-height: 1.7;
+      }
+      .modal-body-navy h6 {
+        color: var(--primary);
+        font-weight: 600;
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 0.6px;
+        margin-top: 16px;
+        margin-bottom: 8px;
+      }
+      .modal-body-navy ul {
+        padding-left: 18px;
+        margin-bottom: 16px;
+        color: var(--text-body);
+      }
+      .modal-body-navy ul li {
+        margin-bottom: 6px;
       }
 
       /* Contact Section */
@@ -281,15 +520,17 @@
         text-align: center;
         transition: all 0.3s ease;
         display: block;
+        text-decoration: none !important;
       }
       .contact-box:hover {
-        border-color: var(--primary);
+        border-color: var(--accent);
+        background: var(--bg-card-hover);
         transform: translateY(-4px);
       }
       .contact-icon {
         width: 50px;
         height: 50px;
-        background: rgba(245, 158, 11, 0.1);
+        background: rgba(148, 181, 226, 0.12);
         color: var(--primary);
         border-radius: 10px;
         display: flex;
@@ -297,10 +538,15 @@
         justify-content: center;
         font-size: 24px;
         margin: 0 auto 15px auto;
+        transition: all 0.3s ease;
+      }
+      .contact-box:hover .contact-icon {
+        background: var(--accent);
+        color: #ffffff;
       }
       .contact-box h3 {
         font-size: 15px;
-        color: #fff;
+        color: #ffffff;
         font-weight: 600;
         margin: 0;
       }
@@ -339,6 +585,9 @@
             </li>
             <li class="nav-item">
               <a href="#about-section" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="#experience-section" class="nav-link">Experience</a>
             </li>
             <li class="nav-item">
               <a href="#skills-section" class="nav-link">Skills</a>
@@ -387,16 +636,7 @@
             <div class="row" style="gap: 15px; padding: 10px">
               <!-- Box 1 -->
               <div class="col-12">
-                <div
-                  style="
-                    background: var(--bg-card);
-                    border: 1px solid var(--border-color);
-                    border-radius: 14px;
-                    padding: 24px;
-                    text-align: left;
-                    backdrop-filter: blur(10px);
-                  "
-                >
+                <div class="stat-card">
                   <div
                     style="
                       font-size: 38px;
@@ -410,7 +650,7 @@
                   <div
                     style="
                       font-size: 15px;
-                      color: var(--text-muted);
+                      color: var(--text-body);
                       font-weight: 500;
                     "
                   >
@@ -421,15 +661,7 @@
 
               <!-- Box 2 -->
               <div class="col-12">
-                <div
-                  style="
-                    background: var(--bg-card);
-                    border: 1px solid var(--border-color);
-                    border-radius: 14px;
-                    padding: 20px;
-                    text-align: left;
-                  "
-                >
+                <div class="stat-card">
                   <div
                     style="
                       font-size: 28px;
@@ -448,27 +680,19 @@
 
               <!-- Box 3 -->
               <div class="col-12">
-                <div
-                  style="
-                    background: var(--bg-card);
-                    border: 1px solid var(--border-color);
-                    border-radius: 14px;
-                    padding: 20px;
-                    text-align: left;
-                  "
-                >
+                <div class="stat-card">
                   <div
                     style="
                       font-size: 28px;
                       font-weight: 700;
-                      color: #fff;
+                      color: #ffffff;
                       font-family: &quot;Poppins&quot;, sans-serif;
                     "
                   >
                     10+
                   </div>
                   <div style="font-size: 13px; color: var(--text-muted)">
-                    Apps Maintained
+                    Apps Built &amp; Maintained
                   </div>
                 </div>
               </div>
@@ -498,8 +722,129 @@
                 <p class="mb-0">
                   Combines strong programming capabilities with practical
                   troubleshooting skills to deliver high-quality, reliable
-                  software solutions that support key business objectives.
+                  software solutions that support key public service and
+                  business objectives.
                 </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work Experience Section -->
+    <section class="section-space" id="experience-section">
+      <div class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h2>Work Experience</h2>
+          <p>
+            Professional track record in government digital infrastructure &amp;
+            software development
+          </p>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <!-- Organization 1: Dinas Kesehatan Kota Tangerang -->
+            <div class="exp-card" data-aos="fade-up">
+              <div class="exp-org-header">
+                <div>
+                  <div class="exp-org-title">
+                    <i class="las la-hospital-alt"></i> Dinas Kesehatan Kota
+                    Tangerang
+                  </div>
+                  <div class="exp-org-meta">
+                    Kontrak &bull; Kota Tangerang, Banten, Indonesia (Di lokasi)
+                  </div>
+                </div>
+                <span class="exp-duration-badge">3 thn 11 bln</span>
+              </div>
+
+              <div class="exp-timeline">
+                <!-- Role 1 -->
+                <div class="exp-role-item">
+                  <span class="exp-role-dot active-role"></span>
+                  <div class="exp-role-title">Tenaga Programmer</div>
+                  <div class="exp-role-period">
+                    Jan 2025 – Saat ini &bull; 1 thn 11 bln
+                  </div>
+                  <p class="exp-role-desc">
+                    Merancang arsitektur, mengembangkan aplikasi layanan
+                    kesehatan daerah baru (seperti SINAPS, PERISAI, PROKESDA,
+                    dan SIDAK), mengintegrasikan REST API antar-sistem, serta
+                    memimpin pemeliharaan dan optimalisasi performa portal
+                    Dinkes dan seluruh Puskesmas se-Kota Tangerang.
+                  </p>
+                  <div class="exp-skill-pills">
+                    <span class="exp-skill-pill">PHP</span>
+                    <span class="exp-skill-pill">MySQL</span>
+                    <span class="exp-skill-pill">REST API</span>
+                    <span class="exp-skill-pill">JavaScript</span>
+                    <span class="exp-skill-pill">HTML5 &amp; CSS</span>
+                  </div>
+                </div>
+
+                <!-- Role 2 -->
+                <div class="exp-role-item">
+                  <span class="exp-role-dot"></span>
+                  <div class="exp-role-title">Junior Programmer</div>
+                  <div class="exp-role-period past-period">
+                    Jan 2023 – Des 2024 &bull; 2 thn
+                  </div>
+                  <p class="exp-role-desc">
+                    Mengembangkan modul aplikasi internal dan pelayanan publik
+                    berbasis web, mengelola struktur basis data MySQL, serta
+                    melakukan pembaruan fitur pada sistem informasi kesehatan
+                    (e-KS2, Kompak Sumringah, PHBS, SICERIA, dan SIKASEP).
+                  </p>
+                  <div class="exp-skill-pills">
+                    <span class="exp-skill-pill">PHP</span>
+                    <span class="exp-skill-pill">MySQL</span>
+                    <span class="exp-skill-pill">REST API</span>
+                    <span class="exp-skill-pill">JavaScript</span>
+                    <span class="exp-skill-pill">HTML5 &amp; CSS</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Organization 2: Dinas Komunikasi dan Informatika Kota Tangerang -->
+            <div class="exp-card" data-aos="fade-up" data-aos-delay="100">
+              <div class="exp-org-header">
+                <div>
+                  <div class="exp-org-title">
+                    <i class="las la-network-wired"></i> Dinas Komunikasi dan
+                    Informatika Kota Tangerang
+                  </div>
+                  <div class="exp-org-meta">
+                    Kontrak &bull; Kota Tangerang, Banten, Indonesia
+                  </div>
+                </div>
+                <span class="exp-duration-badge">2 thn</span>
+              </div>
+
+              <div class="exp-timeline">
+                <div class="exp-role-item">
+                  <span class="exp-role-dot"></span>
+                  <div class="exp-role-title">IT Support</div>
+                  <div class="exp-role-period past-period">
+                    Jan 2021 – Des 2022 &bull; 2 thn
+                  </div>
+                  <p class="exp-role-desc">
+                    Menangani dukungan teknis operasional, troubleshooting
+                    aplikasi pemerintahan, serta membantu pengelolaan basis data
+                    dan antarmuka web dasar di lingkungan Pemerintah Kota
+                    Tangerang.
+                  </p>
+                  <div class="exp-skill-pills">
+                    <span class="exp-skill-pill">PHP</span>
+                    <span class="exp-skill-pill">MySQL</span>
+                    <span class="exp-skill-pill">JavaScript</span>
+                    <span class="exp-skill-pill">HTML5 &amp; CSS</span>
+                    <span class="exp-skill-pill">System Maintenance</span>
+                    <span class="exp-skill-pill">Data Entry</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -524,11 +869,11 @@
               </div>
               <div class="skill-item-grid">
                 <div class="skill-badge-item">
-                  <i class="lab la-html5" style="color: #e34f26"></i>
+                  <i class="lab la-html5" style="color: #fe6d2c"></i>
                   <span>HTML5</span>
                 </div>
                 <div class="skill-badge-item">
-                  <i class="lab la-css3-alt" style="color: #1572b6"></i>
+                  <i class="lab la-css3-alt" style="color: #94b5e2"></i>
                   <span>CSS3</span>
                 </div>
                 <div class="skill-badge-item">
@@ -536,7 +881,7 @@
                   <span>JavaScript</span>
                 </div>
                 <div class="skill-badge-item">
-                  <i class="lab la-bootstrap" style="color: #7952b3"></i>
+                  <i class="lab la-bootstrap" style="color: #9b7ede"></i>
                   <span>Bootstrap</span>
                 </div>
               </div>
@@ -551,7 +896,7 @@
               </div>
               <div class="skill-item-grid">
                 <div class="skill-badge-item">
-                  <i class="lab la-php" style="color: #8892be"></i>
+                  <i class="lab la-php" style="color: #94b5e2"></i>
                   <span>PHP</span>
                 </div>
                 <div class="skill-badge-item">
@@ -573,11 +918,11 @@
               </div>
               <div class="skill-item-grid">
                 <div class="skill-badge-item">
-                  <i class="las la-database" style="color: #00758f"></i>
+                  <i class="las la-database" style="color: #94b5e2"></i>
                   <span>MySQL</span>
                 </div>
                 <div class="skill-badge-item">
-                  <i class="lab la-git" style="color: #f05032"></i>
+                  <i class="lab la-git" style="color: #fe6d2c"></i>
                   <span>Git</span>
                 </div>
               </div>
@@ -600,6 +945,7 @@
           <i class="las la-code"></i> Aplikasi Baru
         </div>
         <div class="row">
+          <!-- SINAPS -->
           <div class="col-md-6 mb-4" data-aos="fade-up">
             <div class="project-card-modern">
               <div>
@@ -611,9 +957,32 @@
                   Dokumen Anggaran, Ticketing IT Support, dan Remunerasi).
                 </p>
               </div>
+              <div class="project-footer">
+                <div class="tech-stack-list">
+                  <span class="tech-pill">PHP</span>
+                  <span class="tech-pill">MySQL</span>
+                  <span class="tech-pill">JavaScript</span>
+                  <span class="tech-pill">HTML5/CSS3</span>
+                  <span class="tech-pill">REST API</span>
+                </div>
+                <button
+                  type="button"
+                  class="btn-project-detail"
+                  data-toggle="modal"
+                  data-target="#projectModal"
+                  data-title="SINAPS — Sistem Informasi Perkantoran Dinas Kesehatan"
+                  data-category="Web Application • Pengembangan Baru"
+                  data-desc="Platform terintegrasi untuk mendigitalisasi tata kelola administrasi internal dan operasional harian di lingkungan Dinas Kesehatan Kota Tangerang."
+                  data-features="Manajemen penjadwalan penggunaan aula & ruang rapat|Monitoring agenda pimpinan secara real-time|Arsip digital surat perkantoran, produk hukum, dan dokumen anggaran|Sistem ticketing bantuan teknis IT Support & perhitungan remunerasi"
+                  data-tech="PHP, MySQL, JavaScript, HTML5/CSS3, REST API"
+                >
+                  Detail <i class="las la-arrow-right"></i>
+                </button>
+              </div>
             </div>
           </div>
 
+          <!-- PERISAI -->
           <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
             <div class="project-card-modern">
               <div>
@@ -625,9 +994,32 @@
                   Zoonosis per Kecamatan).
                 </p>
               </div>
+              <div class="project-footer">
+                <div class="tech-stack-list">
+                  <span class="tech-pill">PHP</span>
+                  <span class="tech-pill">MySQL</span>
+                  <span class="tech-pill">JavaScript</span>
+                  <span class="tech-pill">HTML5/CSS3</span>
+                  <span class="tech-pill">REST API</span>
+                </div>
+                <button
+                  type="button"
+                  class="btn-project-detail"
+                  data-toggle="modal"
+                  data-target="#projectModal"
+                  data-title="PERISAI — Penatalaksanaan Penyakit Tular Vektor & Zoonosis"
+                  data-category="Web Application • Pengembangan Baru"
+                  data-desc="Sistem surveilans epidemiologi berbasis wilayah untuk memetakan dan memantau sebaran kasus penyakit tular vektor, zoonosis, serta penanganan kasus gigitan hewan berbisa."
+                  data-features="Pemetaan dan tracking kasus berbasis wilayah per Kecamatan|Visualisasi grafik tren epidemiologi tular vektor & zoonosis|Pelaporan cepat fasilitas kesehatan untuk respons pengendalian lapangan"
+                  data-tech="PHP, MySQL, JavaScript, HTML5/CSS3, REST API"
+                >
+                  Detail <i class="las la-arrow-right"></i>
+                </button>
+              </div>
             </div>
           </div>
 
+          <!-- PROKESDA -->
           <div class="col-md-6 mb-4" data-aos="fade-up">
             <div class="project-card-modern">
               <div>
@@ -638,9 +1030,32 @@
                   profil kesehatan daerah secara rinci.
                 </p>
               </div>
+              <div class="project-footer">
+                <div class="tech-stack-list">
+                  <span class="tech-pill">PHP</span>
+                  <span class="tech-pill">MySQL</span>
+                  <span class="tech-pill">JavaScript</span>
+                  <span class="tech-pill">HTML5/CSS3</span>
+                  <span class="tech-pill">REST API</span>
+                </div>
+                <button
+                  type="button"
+                  class="btn-project-detail"
+                  data-toggle="modal"
+                  data-target="#projectModal"
+                  data-title="PROKESDA — Profil Kesehatan Daerah"
+                  data-category="Web Application • Pengembangan Baru"
+                  data-desc="Sistem kompilasi dan validasi data indikator kesehatan dari rumah sakit dan fasilitas pelayanan kesehatan untuk penyusunan Profil Kesehatan Daerah."
+                  data-features="Input & validasi terstruktur indikator pelayanan rumah sakit|Rekapitulasi otomatis data kesehatan daerah secara periodik|Ekspor laporan terstandar untuk kebutuhan evaluasi kebijakan"
+                  data-tech="PHP, MySQL, JavaScript, HTML5/CSS3, REST API"
+                >
+                  Detail <i class="las la-arrow-right"></i>
+                </button>
+              </div>
             </div>
           </div>
 
+          <!-- SIDAK -->
           <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
             <div class="project-card-modern">
               <div>
@@ -651,6 +1066,27 @@
                   Khusus) beserta dashboard monitoring BOK Puskesmas.
                 </p>
               </div>
+              <div class="project-footer">
+                <div class="tech-stack-list">
+                  <span class="tech-pill">PHP</span>
+                  <span class="tech-pill">MySQL</span>
+                  <span class="tech-pill">JavaScript</span>
+                  <span class="tech-pill">HTML5/CSS3</span>
+                </div>
+                <button
+                  type="button"
+                  class="btn-project-detail"
+                  data-toggle="modal"
+                  data-target="#projectModal"
+                  data-title="SIDAK — Sistem Informasi Dana Alokasi Khusus"
+                  data-category="Web Application • Pengembangan Baru"
+                  data-desc="Aplikasi perencanaan, pelaporan realisasi anggaran, dan pemantauan serapan Dana Alokasi Khusus (DAK) serta Bantuan Operasional Kesehatan (BOK) seluruh Puskesmas."
+                  data-features="Dashboard monitoring serapan anggaran BOK per Puskesmas|Tracking progres fisik dan keuangan kegiatan DAK|Pelaporan berkala yang transparan dan mudah diaudit"
+                  data-tech="PHP, MySQL, JavaScript, HTML5/CSS3"
+                >
+                  Detail <i class="las la-arrow-right"></i>
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -660,6 +1096,7 @@
           <i class="las la-tools"></i> Maintenance &amp; Pembaruan Aplikasi
         </div>
         <div class="row">
+          <!-- Web DINKES -->
           <div class="col-md-4 mb-4" data-aos="fade-up">
             <div class="project-card-modern">
               <div>
@@ -670,9 +1107,32 @@
                   Kesehatan Kota Tangerang.
                 </p>
               </div>
+              <div class="project-footer">
+                <div class="tech-stack-list">
+                  <span class="tech-pill">PHP</span>
+                  <span class="tech-pill">MySQL</span>
+                  <span class="tech-pill">JavaScript</span>
+                  <span class="tech-pill">HTML5/CSS3</span>
+                  <span class="tech-pill">REST API</span>
+                </div>
+                <button
+                  type="button"
+                  class="btn-project-detail"
+                  data-toggle="modal"
+                  data-target="#projectModal"
+                  data-title="Web DINKES — Portal Resmi Dinas Kesehatan Kota Tangerang"
+                  data-category="Maintenance & Feature Enhancement"
+                  data-desc="Pemeliharaan berkelanjutan, peningkatan keamanan, dan pengembangan modul informasi publik pada portal utama Dinas Kesehatan Kota Tangerang."
+                  data-features="Optimasi kecepatan akses dan keamanan aplikasi web|Pembaruan modul publikasi berita, layanan, dan data kesehatan|Integrasi konten informasi publik lintas bidang"
+                  data-tech="PHP, MySQL, JavaScript, HTML5/CSS3, REST API"
+                >
+                  Detail <i class="las la-arrow-right"></i>
+                </button>
+              </div>
             </div>
           </div>
 
+          <!-- Web Puskesmas -->
           <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
             <div class="project-card-modern">
               <div>
@@ -683,9 +1143,32 @@
                   se-Kota Tangerang.
                 </p>
               </div>
+              <div class="project-footer">
+                <div class="tech-stack-list">
+                  <span class="tech-pill">PHP</span>
+                  <span class="tech-pill">MySQL</span>
+                  <span class="tech-pill">JavaScript</span>
+                  <span class="tech-pill">HTML5/CSS3</span>
+                  <span class="tech-pill">REST API</span>
+                </div>
+                <button
+                  type="button"
+                  class="btn-project-detail"
+                  data-toggle="modal"
+                  data-target="#projectModal"
+                  data-title="Web Puskesmas — Jaringan Portal Puskesmas se-Kota Tangerang"
+                  data-category="Maintenance & Multi-Site Integration"
+                  data-desc="Pengelolaan terpusat dan sinkronisasi data layanan informasi untuk seluruh jaringan portal Puskesmas di wilayah Kota Tangerang."
+                  data-features="Sinkronisasi jadwal layanan dan profil seluruh Puskesmas|Standardisasi tampilan dan struktur informasi publik|Pemeliharaan database terpusat dan perbaikan bug operasional"
+                  data-tech="PHP, MySQL, JavaScript, HTML5/CSS3, REST API"
+                >
+                  Detail <i class="las la-arrow-right"></i>
+                </button>
+              </div>
             </div>
           </div>
 
+          <!-- e-KS2 & e-Klaim PKMK -->
           <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
             <div class="project-card-modern">
               <div>
@@ -697,9 +1180,32 @@
                   Pangan Olahan untuk Keperluan Medis Khusus (PKMK).
                 </p>
               </div>
+              <div class="project-footer">
+                <div class="tech-stack-list">
+                  <span class="tech-pill">PHP</span>
+                  <span class="tech-pill">MySQL</span>
+                  <span class="tech-pill">JavaScript</span>
+                  <span class="tech-pill">HTML5/CSS3</span>
+                  <span class="tech-pill">REST API</span>
+                </div>
+                <button
+                  type="button"
+                  class="btn-project-detail"
+                  data-toggle="modal"
+                  data-target="#projectModal"
+                  data-title="e-KS2 & e-Klaim PKMK"
+                  data-category="System Update & API Integration"
+                  data-desc="Pembaruan alur verifikasi dan integrasi layanan klaim pembiayaan kesehatan bagi masyarakat rentan (PMKS) serta klaim Pangan Olahan untuk Keperluan Medis Khusus (PKMK)."
+                  data-features="Integrasi validasi kepesertaan melalui REST API|Alur pengajuan dan verifikasi berkas klaim berbasis web|Monitoring status pencairan dan rekapitulasi klaim fasilitas kesehatan"
+                  data-tech="PHP, MySQL, JavaScript, HTML5/CSS3, REST API"
+                >
+                  Detail <i class="las la-arrow-right"></i>
+                </button>
+              </div>
             </div>
           </div>
 
+          <!-- Kompak Sumringah -->
           <div class="col-md-4 mb-4" data-aos="fade-up">
             <div class="project-card-modern">
               <div>
@@ -710,9 +1216,31 @@
                   Menular).
                 </p>
               </div>
+              <div class="project-footer">
+                <div class="tech-stack-list">
+                  <span class="tech-pill">PHP</span>
+                  <span class="tech-pill">MySQL</span>
+                  <span class="tech-pill">JavaScript</span>
+                  <span class="tech-pill">HTML5/CSS</span>
+                </div>
+                <button
+                  type="button"
+                  class="btn-project-detail"
+                  data-toggle="modal"
+                  data-target="#projectModal"
+                  data-title="Kompak Sumringah — Pendataan Lansia & PTM"
+                  data-category="System Update"
+                  data-desc="Sistem pencatatan dan pemantauan skrining kesehatan kelompok lanjut usia (Lansia) serta deteksi dini faktor risiko Penyakit Tidak Menular (PTM)."
+                  data-features="Pencatatan riwayat skrining kesehatan lansia dan PTM|Rekapitulasi capaian layanan posbindu dan puskesmas|Optimasi query laporan untuk volume data penduduk yang besar"
+                  data-tech="PHP, MySQL, JavaScript, HTML5/CSS"
+                >
+                  Detail <i class="las la-arrow-right"></i>
+                </button>
+              </div>
             </div>
           </div>
 
+          <!-- PHBS - Sekoper Semangat -->
           <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
             <div class="project-card-modern">
               <div>
@@ -720,12 +1248,35 @@
                 <h4>PHBS - Sekoper Semangat</h4>
                 <p>
                   Sistem monitoring indikator Perilaku Hidup Bersih dan Sehat
-                  (PHBS) tatanan masyarakat dan Berperilahu Hidup Sehat (BHS).
+                  (PHBS) tatanan masyarakat dan Berperilaku Hidup Sehat (BHS).
                 </p>
+              </div>
+              <div class="project-footer">
+                <div class="tech-stack-list">
+                  <span class="tech-pill">PHP</span>
+                  <span class="tech-pill">MySQL</span>
+                  <span class="tech-pill">JavaScript</span>
+                  <span class="tech-pill">HTML5/CSS</span>
+                  <span class="tech-pill">REST API</span>
+                </div>
+                <button
+                  type="button"
+                  class="btn-project-detail"
+                  data-toggle="modal"
+                  data-target="#projectModal"
+                  data-title="PHBS - Sekoper Semangat"
+                  data-category="System Update"
+                  data-desc="Aplikasi pemantauan capaian indikator Perilaku Hidup Bersih dan Sehat (PHBS) pada tatanan rumah tangga dan masyarakat."
+                  data-features="Input survei indikator PHBS dan BHS berbasis wilayah|Perhitungan otomatis klasifikasi strata PHBS|Dashboard evaluasi capaian program promosi kesehatan"
+                  data-tech="PHP, MySQL, JavaScript, HTML5/CSS"
+                >
+                  Detail <i class="las la-arrow-right"></i>
+                </button>
               </div>
             </div>
           </div>
 
+          <!-- SICERIA -->
           <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
             <div class="project-card-modern">
               <div>
@@ -736,9 +1287,31 @@
                   Pilar STBM, Rumah Sehat &amp; Laporan Kesling).
                 </p>
               </div>
+              <div class="project-footer">
+                <div class="tech-stack-list">
+                  <span class="tech-pill">PHP</span>
+                  <span class="tech-pill">MySQL</span>
+                  <span class="tech-pill">JavaScript</span>
+                  <span class="tech-pill">HTML5/CSS</span>
+                </div>
+                <button
+                  type="button"
+                  class="btn-project-detail"
+                  data-toggle="modal"
+                  data-target="#projectModal"
+                  data-title="SICERIA — Sistem Informasi Cek Rumah dan Lingkungan Kita"
+                  data-category="System Update"
+                  data-desc="Sistem informasi kesehatan lingkungan untuk memantau 5 Pilar Sanitasi Total Berbasis Masyarakat (STBM) dan inspeksi rumah sehat."
+                  data-features="Pendataan sanitasi rumah sehat & capaian pilar STBM|Kompilasi otomatis laporan kesehatan lingkungan (Kesling)|Pemantauan progres kelurahan sehat secara berkala"
+                  data-tech="PHP, MySQL, JavaScript, HTML5/CSS"
+                >
+                  Detail <i class="las la-arrow-right"></i>
+                </button>
+              </div>
             </div>
           </div>
 
+          <!-- SIKASEP -->
           <div class="col-md-12 mb-4" data-aos="fade-up">
             <div class="project-card-modern">
               <div>
@@ -748,6 +1321,28 @@
                   Aplikasi Sertifikasi Keamanan Pangan &amp; Manajemen Pengajuan
                   Sertifikasi Industri Rumah Tangga (P-IRT).
                 </p>
+              </div>
+              <div class="project-footer">
+                <div class="tech-stack-list">
+                  <span class="tech-pill">PHP</span>
+                  <span class="tech-pill">MySQL</span>
+                  <span class="tech-pill">JavaScript</span>
+                  <span class="tech-pill">HTML5/CSS3</span>
+                  <span class="tech-pill">REST API</span>
+                </div>
+                <button
+                  type="button"
+                  class="btn-project-detail"
+                  data-toggle="modal"
+                  data-target="#projectModal"
+                  data-title="SIKASEP — Aplikasi Sertifikasi Keamanan Pangan (P-IRT)"
+                  data-category="System Update"
+                  data-desc="Sistem pelayanan perizinan dan verifikasi kelayakan keamanan pangan bagi pelaku usaha Industri Rumah Tangga (P-IRT)."
+                  data-features="Manajemen pengajuan berkas sertifikasi P-IRT secara daring|Penjadwalan penyuluhan keamanan pangan dan survei sarana|Tracking status penerbitan sertifikat bagi pelaku UMKM pangan"
+                  data-tech="PHP, MySQL, JavaScript, HTML5/CSS3, REST API"
+                >
+                  Detail <i class="las la-arrow-right"></i>
+                </button>
               </div>
             </div>
           </div>
@@ -808,7 +1403,7 @@
             data-aos-delay="300"
           >
             <a
-              href="https://www.instagram.com/jokowidiarto/"
+              href="https://www.instagram.com/wjokojw/"
               target="_blank"
               class="contact-box"
             >
@@ -819,6 +1414,46 @@
         </div>
       </div>
     </section>
+
+    <!-- Reusable Project Detail Modal -->
+    <div
+      class="modal fade"
+      id="projectModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="projectModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content modal-content-navy">
+          <div class="modal-header modal-header-navy">
+            <div>
+              <span
+                id="modalProjectCategory"
+                class="project-tag mb-1"
+                style="font-size: 10px"
+              ></span>
+              <h5 class="modal-title" id="projectModalLabel">Project Title</h5>
+            </div>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body modal-body-navy">
+            <p id="modalProjectDesc" class="mb-3"></p>
+            <h6>Fitur &amp; Ruang Lingkup Utama</h6>
+            <ul id="modalProjectFeatures"></ul>
+            <h6>Tech Stack</h6>
+            <div id="modalProjectTech" class="tech-stack-list"></div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Scripts -->
     <script src="js/jquery.min.js"></script>
@@ -837,6 +1472,33 @@
         AOS.init({
           duration: 800,
           once: true,
+        });
+
+        // Populate Project Detail Modal dynamically
+        $("#projectModal").on("show.bs.modal", function (event) {
+          var button = $(event.relatedTarget);
+          var title = button.data("title");
+          var category = button.data("category");
+          var desc = button.data("desc");
+          var features = button.data("features").split("|");
+          var techList = button.data("tech").split(", ");
+
+          var modal = $(this);
+          modal.find("#projectModalLabel").text(title);
+          modal.find("#modalProjectCategory").text(category);
+          modal.find("#modalProjectDesc").text(desc);
+
+          var featuresHtml = "";
+          features.forEach(function (item) {
+            featuresHtml += "<li>" + item + "</li>";
+          });
+          modal.find("#modalProjectFeatures").html(featuresHtml);
+
+          var techHtml = "";
+          techList.forEach(function (tech) {
+            techHtml += '<span class="tech-pill">' + tech + "</span>";
+          });
+          modal.find("#modalProjectTech").html(techHtml);
         });
       });
     </script>

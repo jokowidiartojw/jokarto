@@ -1,0 +1,882 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Joko Widiarto — Senior Programmer & IT Specialist</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Google Fonts: Inter & Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS Assets -->
+    <link rel="stylesheet" href="assets/css/open-iconic-bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/animate.css" />
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="assets/css/magnific-popup.css" />
+    <link rel="stylesheet" href="assets/css/aos.css" />
+    <link rel="stylesheet" href="assets/css/ionicons.min.css" />
+    <link rel="stylesheet" href="assets/css/flaticon.css" />
+    <link rel="stylesheet" href="assets/css/icomoon.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+    />
+
+    <style>
+      :root {
+        --bg-main: #eee5d4; /* Warm Cream Background */
+        --bg-card: rgba(255, 255, 255, 0.72); /* Crisp Translucent Surface */
+        --bg-card-hover: #ffffff;
+        --primary: #1d4a35; /* Deep Forest Green */
+        --primary-glow: rgba(29, 74, 53, 0.15);
+        --accent: #f2462e; /* Vibrant Vermilion Red */
+        --accent-glow: rgba(242, 70, 46, 0.28);
+        --text-main: #1d4a35; /* Dark Green for High Contrast Readability */
+        --text-body: #2c3e35; /* Softer Dark Tone for Paragraphs */
+        --text-muted: #576b61; /* Muted Sage/Slate */
+        --border-color: rgba(29, 74, 53, 0.14);
+      }
+
+      body {
+        background-color: var(--bg-main) !important;
+        color: var(--text-body) !important;
+        font-family: "Inter", sans-serif !important;
+        overflow-x: hidden;
+      }
+
+      /* Override Bootstrap text-muted for better contrast on #EEE5D4 */
+      .text-muted {
+        color: var(--text-muted) !important;
+      }
+
+      /* Sticky Fixed Navbar */
+      .ftco_navbar {
+        position: fixed !important;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1030;
+        background: rgba(238, 229, 212, 0.9) !important;
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border-color);
+        padding: 15px 0 !important;
+        box-shadow: 0 4px 20px rgba(29, 74, 53, 0.06);
+      }
+      .navbar-brand {
+        font-family: "Poppins", sans-serif;
+        font-weight: 700 !important;
+        letter-spacing: -0.5px;
+        color: var(--primary) !important;
+      }
+      .navbar-brand span {
+        color: var(--accent);
+      }
+      .navbar-toggler {
+        color: var(--primary) !important;
+        border-color: var(--border-color) !important;
+      }
+      .nav-link {
+        font-size: 14px !important;
+        font-weight: 600 !important;
+        color: var(--text-muted) !important;
+        transition: all 0.3s ease;
+      }
+      .nav-link:hover,
+      .nav-item.active .nav-link {
+        color: var(--accent) !important;
+      }
+
+      /* Hero Section Adjustment for Fixed Navbar */
+      .hero-wrap {
+        padding: 180px 0 100px 0;
+        position: relative;
+      }
+      .hero-title {
+        font-family: "Poppins", sans-serif;
+        font-size: 52px;
+        font-weight: 700;
+        line-height: 1.15;
+        color: var(--primary);
+      }
+      .hero-title span {
+        background: linear-gradient(135deg, var(--accent) 0%, #c9321d 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .hero-subtitle {
+        font-size: 18px;
+        color: var(--accent);
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1.2px;
+        margin-bottom: 18px;
+      }
+      .btn-custom {
+        background: var(--accent);
+        color: #ffffff !important;
+        font-weight: 600;
+        padding: 14px 32px;
+        border-radius: 10px;
+        box-shadow: 0 10px 25px -5px var(--accent-glow);
+        transition: all 0.3s ease;
+        border: none;
+        display: inline-block;
+      }
+      .btn-custom:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 15px 30px -5px rgba(242, 70, 46, 0.45);
+        background: var(--primary);
+        color: #eee5d4 !important;
+      }
+
+      /* Hero Stat Cards */
+      .stat-card-primary {
+        background: var(--primary);
+        border: 1px solid var(--primary);
+        border-radius: 14px;
+        padding: 24px;
+        text-align: left;
+        box-shadow: 0 12px 30px -10px rgba(29, 74, 53, 0.3);
+      }
+      .stat-card-secondary {
+        background: var(--bg-card);
+        border: 1px solid var(--border-color);
+        border-radius: 14px;
+        padding: 20px;
+        text-align: left;
+        backdrop-filter: blur(10px);
+        transition: all 0.3s ease;
+      }
+      .stat-card-secondary:hover {
+        border-color: var(--accent);
+        background: var(--bg-card-hover);
+      }
+
+      /* Section Common */
+      .section-title {
+        text-align: center;
+        margin-bottom: 60px;
+      }
+      .section-title h2 {
+        font-family: "Poppins", sans-serif;
+        font-size: 36px;
+        font-weight: 700;
+        color: var(--primary);
+      }
+      .section-title p {
+        color: var(--text-muted);
+        font-size: 15px;
+      }
+
+      /* About Section */
+      .about-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border-color);
+        border-radius: 16px;
+        padding: 40px;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 10px 30px -15px var(--primary-glow);
+      }
+      .about-text p {
+        color: var(--text-body);
+        font-size: 16px;
+        line-height: 1.75;
+      }
+
+      /* Skills Section - 3 Segment Modern Grid */
+      .skill-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border-color);
+        border-radius: 16px;
+        padding: 30px 20px;
+        height: 100%;
+        transition: all 0.3s ease;
+        box-shadow: 0 8px 25px -12px var(--primary-glow);
+      }
+      .skill-card:hover {
+        border-color: var(--primary);
+        background: var(--bg-card-hover);
+        transform: translateY(-5px);
+      }
+      .skill-header {
+        font-family: "Poppins", sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        color: var(--primary);
+        margin-bottom: 25px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .skill-header i {
+        color: var(--accent);
+        font-size: 24px;
+      }
+      .skill-item-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+      }
+      .skill-badge-item {
+        background: rgba(238, 229, 212, 0.45);
+        border: 1px solid var(--border-color);
+        border-radius: 10px;
+        padding: 16px 10px;
+        text-align: center;
+        transition: all 0.3s ease;
+      }
+      .skill-badge-item:hover {
+        background: rgba(242, 70, 46, 0.08);
+        border-color: var(--accent);
+      }
+      .skill-badge-item i {
+        font-size: 32px;
+        color: var(--primary);
+        margin-bottom: 8px;
+        display: block;
+      }
+      .skill-badge-item span {
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--primary);
+      }
+
+      /* Portfolio Section */
+      .portfolio-segment-header {
+        font-family: "Poppins", sans-serif;
+        font-size: 20px;
+        font-weight: 600;
+        color: var(--primary);
+        margin: 40px 0 25px 0;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .portfolio-segment-header i {
+        color: var(--accent);
+      }
+      .project-card-modern {
+        background: var(--bg-card);
+        border: 1px solid var(--border-color);
+        border-radius: 14px;
+        padding: 28px;
+        height: 100%;
+        transition: all 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-shadow: 0 8px 25px -12px var(--primary-glow);
+      }
+      .project-card-modern:hover {
+        background: var(--bg-card-hover);
+        border-color: var(--accent);
+        transform: translateY(-5px);
+        box-shadow: 0 20px 40px -15px var(--primary-glow);
+      }
+      .project-tag {
+        align-self: flex-start;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        color: var(--primary);
+        background: rgba(29, 74, 53, 0.12);
+        padding: 4px 10px;
+        border-radius: 6px;
+        margin-bottom: 15px;
+        display: inline-block;
+      }
+      .project-tag-alt {
+        color: var(--accent);
+        background: rgba(242, 70, 46, 0.12);
+      }
+      .project-card-modern h4 {
+        color: var(--primary);
+        font-family: "Poppins", sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 12px;
+      }
+      .project-card-modern p {
+        color: var(--text-body);
+        font-size: 14px;
+        line-height: 1.65;
+        margin-bottom: 0;
+      }
+
+      /* Contact Section */
+      .contact-box {
+        background: var(--bg-card);
+        border: 1px solid var(--border-color);
+        border-radius: 12px;
+        padding: 30px 20px;
+        text-align: center;
+        transition: all 0.3s ease;
+        display: block;
+        text-decoration: none !important;
+        box-shadow: 0 8px 25px -12px var(--primary-glow);
+      }
+      .contact-box:hover {
+        border-color: var(--accent);
+        background: var(--bg-card-hover);
+        transform: translateY(-4px);
+      }
+      .contact-icon {
+        width: 50px;
+        height: 50px;
+        background: rgba(29, 74, 53, 0.1);
+        color: var(--primary);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        margin: 0 auto 15px auto;
+        transition: all 0.3s ease;
+      }
+      .contact-box:hover .contact-icon {
+        background: var(--accent);
+        color: #ffffff;
+      }
+      .contact-box h3 {
+        font-size: 15px;
+        color: var(--primary);
+        font-weight: 600;
+        margin: 0;
+      }
+
+      /* Utilities */
+      .section-space {
+        padding: 100px 0;
+      }
+    </style>
+  </head>
+
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="120">
+    <!-- Sticky Navbar -->
+    <nav
+      class="navbar navbar-expand-lg navbar-light ftco_navbar ftco-navbar-light site-navbar-target"
+      id="ftco-navbar"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Joko<span> Widiarto</span></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#ftco-nav"
+          aria-controls="ftco-nav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="oi oi-menu"></span> Menu
+        </button>
+
+        <div class="collapse navbar-collapse" id="ftco-nav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a href="#home-section" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="#about-section" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="#skills-section" class="nav-link">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a href="#projects-section" class="nav-link">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a href="#contact-section" class="nav-link">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home-section" class="hero-wrap">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-7" data-aos="fade-up">
+            <div class="hero-subtitle">Senior Programmer</div>
+            <h1 class="hero-title mb-4">
+              Crafting Reliable <span>Web Applications</span>
+            </h1>
+            <p
+              class="text-muted mb-5"
+              style="font-size: 18px; max-width: 540px"
+            >
+              Combining 4+ years of full-stack software development expertise
+              with 2 years of robust IT support.
+            </p>
+            <div>
+              <a
+                href="assets/images/CV_JOKO_WIDIARTO.pdf"
+                target="_blank"
+                class="btn-custom"
+                >Download CV <i class="las la-download ml-2"></i
+              ></a>
+            </div>
+          </div>
+          <div
+            class="col-lg-5 mt-5 mt-lg-0"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="row" style="gap: 15px; padding: 10px">
+              <!-- Box 1 (Primary Deep Forest Green Highlight) -->
+              <div class="col-12">
+                <div class="stat-card-primary">
+                  <div
+                    style="
+                      font-size: 38px;
+                      font-weight: 700;
+                      color: #eee5d4;
+                      font-family: &quot;Poppins&quot;, sans-serif;
+                    "
+                  >
+                    4+ Years
+                  </div>
+                  <div
+                    style="
+                      font-size: 15px;
+                      color: rgba(238, 229, 212, 0.85);
+                      font-weight: 500;
+                    "
+                  >
+                    Web Development Experience
+                  </div>
+                </div>
+              </div>
+
+              <!-- Box 2 -->
+              <div class="col-12">
+                <div class="stat-card-secondary">
+                  <div
+                    style="
+                      font-size: 28px;
+                      font-weight: 700;
+                      color: var(--accent);
+                      font-family: &quot;Poppins&quot;, sans-serif;
+                    "
+                  >
+                    2 Years
+                  </div>
+                  <div
+                    style="
+                      font-size: 13px;
+                      color: var(--text-muted);
+                      font-weight: 600;
+                    "
+                  >
+                    IT Support
+                  </div>
+                </div>
+              </div>
+
+              <!-- Box 3 -->
+              <div class="col-12">
+                <div class="stat-card-secondary">
+                  <div
+                    style="
+                      font-size: 28px;
+                      font-weight: 700;
+                      color: var(--primary);
+                      font-family: &quot;Poppins&quot;, sans-serif;
+                    "
+                  >
+                    10+
+                  </div>
+                  <div
+                    style="
+                      font-size: 13px;
+                      color: var(--text-muted);
+                      font-weight: 600;
+                    "
+                  >
+                    Apps Maintained
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section-space" id="about-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10" data-aos="fade-up">
+            <div class="about-card">
+              <div class="section-title text-left mb-4">
+                <h2>About Me</h2>
+              </div>
+              <div class="about-text">
+                <p>
+                  Senior Tech Specialist with 4+ years of Web Development
+                  expertise and 2 years of hands-on IT Support experience.
+                  Skilled in building robust web applications, optimizing
+                  databases, and maintaining system infrastructure using PHP,
+                  MySQL, JavaScript, REST APIs, and Bootstrap.
+                </p>
+                <p class="mb-0">
+                  Combines strong programming capabilities with practical
+                  troubleshooting skills to deliver high-quality, reliable
+                  software solutions that support key business objectives.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section-space" id="skills-section">
+      <div class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h2>Technical Expertise</h2>
+          <p>Structured breakdown of core competencies and toolsets</p>
+        </div>
+
+        <div class="row">
+          <!-- Segment 1: Frontend -->
+          <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="skill-card">
+              <div class="skill-header">
+                <i class="las la-laptop-code"></i> Frontend
+              </div>
+              <div class="skill-item-grid">
+                <div class="skill-badge-item">
+                  <i class="lab la-html5" style="color: #f2462e"></i>
+                  <span>HTML5</span>
+                </div>
+                <div class="skill-badge-item">
+                  <i class="lab la-css3-alt" style="color: #1572b6"></i>
+                  <span>CSS3</span>
+                </div>
+                <div class="skill-badge-item">
+                  <i class="lab la-js-square" style="color: #d99b00"></i>
+                  <span>JavaScript</span>
+                </div>
+                <div class="skill-badge-item">
+                  <i class="lab la-bootstrap" style="color: #7952b3"></i>
+                  <span>Bootstrap</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Segment 2: Backend -->
+          <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="skill-card">
+              <div class="skill-header">
+                <i class="las la-server"></i> Backend
+              </div>
+              <div class="skill-item-grid">
+                <div class="skill-badge-item">
+                  <i class="lab la-php" style="color: #4f5d95"></i>
+                  <span>PHP</span>
+                </div>
+                <div class="skill-badge-item">
+                  <i
+                    class="las la-network-wired"
+                    style="color: var(--accent)"
+                  ></i>
+                  <span>REST API</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Segment 3: Data & Tools -->
+          <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="skill-card">
+              <div class="skill-header">
+                <i class="las la-database"></i> Data &amp; Tools
+              </div>
+              <div class="skill-item-grid">
+                <div class="skill-badge-item">
+                  <i class="las la-database" style="color: #1d4a35"></i>
+                  <span>MySQL</span>
+                </div>
+                <div class="skill-badge-item">
+                  <i class="lab la-git" style="color: #f2462e"></i>
+                  <span>Git</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="section-space" id="projects-section">
+      <div class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h2>Featured Portfolio</h2>
+          <p>Key applications and system maintenance projects</p>
+        </div>
+
+        <!-- Kategori 1: Aplikasi Baru -->
+        <div class="portfolio-segment-header" data-aos="fade-up">
+          <i class="las la-code"></i> Aplikasi Baru
+        </div>
+        <div class="row">
+          <div class="col-md-6 mb-4" data-aos="fade-up">
+            <div class="project-card-modern">
+              <div>
+                <span class="project-tag">Web Application</span>
+                <h4>SINAPS</h4>
+                <p>
+                  Sistem Informasi Perkantoran Dinas Kesehatan (Manajemen Jadwal
+                  Aula, Monitoring Agenda, Surat Perkantoran, Produk Hukum,
+                  Dokumen Anggaran, Ticketing IT Support, dan Remunerasi).
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="project-card-modern">
+              <div>
+                <span class="project-tag">Web Application</span>
+                <h4>PERISAI</h4>
+                <p>
+                  Penatalaksanaan Penyakit Tular Vektor, Zoonosis &amp; Hewan
+                  Berbisa Berbasis Wilayah (Tracking &amp; Grafik Tular Vektor /
+                  Zoonosis per Kecamatan).
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-4" data-aos="fade-up">
+            <div class="project-card-modern">
+              <div>
+                <span class="project-tag">Web Application</span>
+                <h4>PROKESDA (Profil Kesehatan Daerah)</h4>
+                <p>
+                  Sistem pengolahan data indikator rumah sakit dan pemantauan
+                  profil kesehatan daerah secara rinci.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="project-card-modern">
+              <div>
+                <span class="project-tag">Web Application</span>
+                <h4>SIDAK (Sistem Informasi DAK)</h4>
+                <p>
+                  Pengembangan sistem informasi pengelolaan DAK (Dana Alokasi
+                  Khusus) beserta dashboard monitoring BOK Puskesmas.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kategori 2: Maintenance & Pembaruan Aplikasi -->
+        <div class="portfolio-segment-header" data-aos="fade-up">
+          <i class="las la-tools"></i> Maintenance &amp; Pembaruan Aplikasi
+        </div>
+        <div class="row">
+          <div class="col-md-4 mb-4" data-aos="fade-up">
+            <div class="project-card-modern">
+              <div>
+                <span class="project-tag project-tag-alt">Maintenance</span>
+                <h4>Web DINKES</h4>
+                <p>
+                  Pemeliharaan dan pembaharuan fitur portal utama Website Dinas
+                  Kesehatan Kota Tangerang.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="project-card-modern">
+              <div>
+                <span class="project-tag project-tag-alt">Maintenance</span>
+                <h4>Web Puskesmas</h4>
+                <p>
+                  Pengelolaan dan integrasi portal layanan informasi Puskesmas
+                  se-Kota Tangerang.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="project-card-modern">
+              <div>
+                <span class="project-tag project-tag-alt">System Update</span>
+                <h4>e-KS2 &amp; e-Klaim PKMK</h4>
+                <p>
+                  Pembaruan sistem layanan integrasi Klaim Skema 2 (Bagi
+                  Masyarakat Penyandang Masalah Kesejahteraan Sosial) dan Klaim
+                  Pangan Olahan untuk Keperluan Medis Khusus (PKMK).
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-4" data-aos="fade-up">
+            <div class="project-card-modern">
+              <div>
+                <span class="project-tag project-tag-alt">System Update</span>
+                <h4>Kompak Sumringah</h4>
+                <p>
+                  Pengembangan sistem pendataan Lansia &amp; PTM (Penyakit Tidak
+                  Menular).
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="project-card-modern">
+              <div>
+                <span class="project-tag project-tag-alt">System Update</span>
+                <h4>PHBS - Sekoper Semangat</h4>
+                <p>
+                  Sistem monitoring indikator Perilaku Hidup Bersih dan Sehat
+                  (PHBS) tatanan masyarakat dan Berperilahu Hidup Sehat (BHS).
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="project-card-modern">
+              <div>
+                <span class="project-tag project-tag-alt">System Update</span>
+                <h4>SICERIA</h4>
+                <p>
+                  Sistem Informasi Cek Rumah dan Lingkungan Kita (Monitoring
+                  Pilar STBM, Rumah Sehat &amp; Laporan Kesling).
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-12 mb-4" data-aos="fade-up">
+            <div class="project-card-modern">
+              <div>
+                <span class="project-tag project-tag-alt">System Update</span>
+                <h4>SIKASEP</h4>
+                <p>
+                  Aplikasi Sertifikasi Keamanan Pangan &amp; Manajemen Pengajuan
+                  Sertifikasi Industri Rumah Tangga (P-IRT).
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section-space" id="contact-section">
+      <div class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h2>Get In Touch</h2>
+          <p>Feel free to reach out for collaborations or opportunities</p>
+        </div>
+
+        <div class="row">
+          <div class="col-md-3 col-6 mb-4" data-aos="fade-up">
+            <a
+              href="mailto:jokowidiartojw@gmail.com"
+              target="_blank"
+              class="contact-box"
+            >
+              <div class="contact-icon"><i class="las la-envelope"></i></div>
+              <h3>Email</h3>
+            </a>
+          </div>
+          <div
+            class="col-md-3 col-6 mb-4"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <a
+              href="https://www.linkedin.com/in/joko-widiarto-825b641b1/"
+              target="_blank"
+              class="contact-box"
+            >
+              <div class="contact-icon"><i class="lab la-linkedin-in"></i></div>
+              <h3>LinkedIn</h3>
+            </a>
+          </div>
+          <div
+            class="col-md-3 col-6 mb-4"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <a
+              href="https://www.youtube.com/channel/UCT4b6HuPMWjNuPE5KagqrIg/videos"
+              target="_blank"
+              class="contact-box"
+            >
+              <div class="contact-icon"><i class="lab la-youtube"></i></div>
+              <h3>YouTube</h3>
+            </a>
+          </div>
+          <div
+            class="col-md-3 col-6 mb-4"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <a
+              href="https://www.instagram.com/jokowidiarto/"
+              target="_blank"
+              class="contact-box"
+            >
+              <div class="contact-icon"><i class="lab la-instagram"></i></div>
+              <h3>Instagram</h3>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        AOS.init({
+          duration: 800,
+          once: true,
+        });
+      });
+    </script>
+  </body>
+</html>
